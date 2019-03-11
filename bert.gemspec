@@ -56,17 +56,10 @@ Gem::Specification.new do |s|
      "test/test_helper.rb"
   ]
 
-  if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
-    s.specification_version = 3
-
-    if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
-      s.add_development_dependency(%q<thoughtbot-shoulda>, [">= 0"])
-    else
-      s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
-    end
-  else
-    s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
-  end
+  s.specification_version = 3
+  s.add_development_dependency(%q<thoughtbot-shoulda>, [">= 0"])
+  s.add_development_dependency(%q<jeweler>, [">= 0"])
+  s.add_development_dependency(%q<rake>, [">= 0"])
+  s.add_development_dependency(%q<test-unit>, [">= 0"])
 end
 
